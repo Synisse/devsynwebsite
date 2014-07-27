@@ -21,49 +21,61 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-1">
+      
+    </div>
+    <div class="row fullnavbar navbar-fixed-top" ng-controller="MenuCtrl">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 symbol menuitemfont menuitem ">
+            <a ng-href="#/aboutme">About Me <span ng-show="isActive('/aboutme')" class="glyphicon glyphicon-ok"></span></a>
+          </div>
+          <div class="col-lg-4 symbol menuitemfont menuitem">
+            <a ng-href="#/projects">Projects <span ng-show="isActive('/projects')" class="glyphicon glyphicon-ok"></span></a>
+          </div>
+          <div class="col-lg-4 symbol menuitemfont menuitem">
+            <a ng-href="#/contact">Contact <span ng-show="isActive('/contact')" class="glyphicon glyphicon-ok"></span></a>
+          </div>
         </div>
-        <div class="col-lg-4">
-          Twitter
-        </div>
-        <div class="col-lg-2">
-        </div>
-        <div class="col-lg-4">
-          Google
-        </div>
-        <div class="col-lg-1">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-1">
-        </div>
-        <div class="col-lg-4">
-          Github
-        </div>
-        <div class="col-lg-2">
-        </div>
-        <div class="col-lg-4">
-          xing/linkedin
-        </div>
-        <div class="col-lg-1">
-        </div>
-      </div>
+      </div>    
+    </div>
 
-      <div class="header" ng-controller="MenuCtrl">
-        <ul class="nav nav-pills pull-right">
+
+    <div class="container">
+      <div class="header">
+<!--         <ul class="nav nav-pills pull-right">
           <li ng-class="getClass('/')"><a ng-href="#">Home</a></li>
           <li ng-class="getClass('/about')"><a ng-href="#/about">About</a></li>
           <li><a ng-href="#">Contact</a></li>
           <li><a ng-href="#">{{testString}}</a></li> 
         </ul>
-        <h3 class="text-muted">yeomantest</h3>
+        <h3 class="text-muted">yeomantest</h3> -->
       </div>
 
       <div ng-view=""></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <div class="row">
+        <div class="col-lg-2">
+        </div>
+        <a target="_blank" href="https://twitter.com/Synisse87">
+        <div class="col-lg-2 symbol">
+          
+          <div class="bigiconfont">circletwitterbird</div>
+          
+        </div>
+        </a>
+        <div class="col-lg-2 symbol">
+          <div class="bigiconfont">circlegoogleplus</div>
+        </div>
+        <div class="col-lg-2 symbol">
+          <div class="bigiconfont">circlegithubalt</div>
+        </div>
+        <div class="col-lg-2 symbol">
+          <div class="bigiconfont">circlexing</div>
+        </div>
+        <div class="col-lg-2">
+        </div>
+      </div>
       </div>
     </div>
 
@@ -118,6 +130,7 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/menu.js"></script>
         <script src="scripts/controllers/projects.js"></script>
+        <script src="scripts/controllers/contact.js"></script>
         <!-- endbuild -->
 </body>
 </html>

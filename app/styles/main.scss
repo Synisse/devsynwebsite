@@ -12,7 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
 }
 
@@ -27,6 +27,7 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
+  padding-top: 80px;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -89,4 +90,79 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+@import "compass/css3/font-face";
+
+@include font-face("Mono Social Icons Font", font-files("/fonts/MonoSocialIconsFont-1.10.woff", "/fonts/MonoSocialIconsFont-1.10.ttf", "/fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont"), "/fonts/MonoSocialIconsFont-1.10.eot", normal, normal);
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+
+.bigiconfont{
+  font-size : 300%;
+  color : #232323;
+  text-align: center;
+}
+
+.menuitemfont{
+  font-size : 150%;
+  color : #232323;
+  text-align: center;
+}
+
+.fullnavbar{
+  margin-top: 20px;
+  background-color: #D1FAC5;
+  -webkit-box-shadow: 0px 8px 7px 0px rgba(50, 50, 50, 0.66);
+  -moz-box-shadow:    0px 8px 7px 0px rgba(50, 50, 50, 0.66);
+  box-shadow:         0px 8px 7px 0px rgba(50, 50, 50, 0.66);
+}
+
+.menuitem {
+
+    // Links rendered as pills
+    > a {
+      border-radius: 5px;
+      color: #232323;
+      &:hover{
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: red;
+        background-color: green;
+      }
+    }
+  
+}
+
+.shizzleleft{
+  float: left;
 }

@@ -21,8 +21,8 @@ angular
     $routeProvider
       .when('/', {
         redirectTo: '/aboutme',
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        // templateUrl: 'views/main.html',
+        // controller: 'MainCtrl'
       })
       .when('/aboutme', {
         templateUrl: 'views/main.html',
@@ -34,7 +34,8 @@ angular
       })
       .when('/projects', {
         templateUrl: 'views/projects.html',
-        controller: 'ProjectsCtrl'
+        controller: 'ProjectsCtrl',
+        filter: 'partition'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',

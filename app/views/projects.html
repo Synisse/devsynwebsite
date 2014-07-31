@@ -1,3 +1,19 @@
 <div class="jumbotron">
-  <h1>Projects</h1>
+  <h1>Projects2</h1>
 </div>
+
+<div ng-show="isSelected()">
+	{{selectedItem}}
+</div>
+<div ng-show="!isSelected()">
+	No ItemSelected
+</div>
+
+
+    <div class="row" ng-repeat="i in projects.range()">
+        <div class="col-lg-4" ng-repeat="project in projects.slice(i,i+3)">
+            <h4>{{project.name}}</h4>
+        </div>
+    </div>	
+
+<!-- </div> -->

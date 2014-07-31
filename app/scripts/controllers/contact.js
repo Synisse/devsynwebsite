@@ -7,11 +7,11 @@
  * # ContactCtrl
  * Controller of the yeomantestApp
  */
-angular.module('yeomantestApp')
-  .controller('ContactCtrl', function ($scope) {
+angular.module('devsynProject')
+  .controller('ContactCtrl', ['$scope', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

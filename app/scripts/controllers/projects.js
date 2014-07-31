@@ -7,11 +7,50 @@
  * # ProjectsCtrl
  * Controller of the yeomantestApp
  */
-angular.module('yeomantestApp')
-  .controller('ProjectsCtrl', function ($scope) {
+angular.module('devsynProject')
+  .controller('ProjectsCtrl', ['$scope', function ($scope) {
+
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+
+    $scope.projects = [
+    	{name: 'prj1', description: 'yololol'},
+    	{name: 'prj2', description: 'yololol2'},      
+      {name: 'prj3', description: 'yololol3'},
+      {name: 'prj4', description: 'yololol4'},
+      {name: 'prj5', description: 'yololol'},
+      {name: 'prj6', description: 'yololol2'},      
+      {name: 'prj7', description: 'yololol3'},
+      {name: 'prj8', description: 'yololol4'}
+    ];
+
+    $scope.selectedItem = '';
+
+    $scope.isSelected = function (){
+      if(this.selectedItem === ''){
+        return false;
+      } else {
+        return true;
+      }
+    };
+
+    $scope.selectItem = function(project){
+      if(this.selectedItem === ''){
+        this.selectedItem = project;
+      } else {
+        this.selectedItem = '';
+      }
+    };
+
+    $scope.projects.range = function() {
+      var range = [];
+      for( var i = 0; i < $scope.projects.length; i = i + 3 ){
+          range.push(i);
+      }
+      return range;
+    };
+
+  }]);

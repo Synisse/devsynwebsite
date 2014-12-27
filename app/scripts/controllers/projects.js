@@ -17,14 +17,17 @@ angular.module('devsynProject')
     ];
 
     $scope.projects = [
-    	{name: 'prj1', description: 'yololol'},
-    	{name: 'prj2', description: 'yololol2'},
-      {name: 'prj3', description: 'yololol3'},
-      {name: 'prj4', description: 'yololol4'},
-      {name: 'prj5', description: 'yololol'},
-      {name: 'prj6', description: 'yololol2'},
-      {name: 'prj7', description: 'yololol3'},
-      {name: 'prj8', description: 'yololol4'}
+    	{pid:'1', name: 'OpenGL-Game', technology:['C++','Visual Studio', 'Glut'],
+        description: 'Programmed a small basic OpenGL Game.',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 100},
+    	{pid:'2', name: 'prj2', description: 'yololol2'},
+      {pid:'3', name: 'prj3', description: 'yololol3'},
+      {pid:'4', name: 'prj4', description: 'yololol4'},
+      {pid:'5', name: 'prj5', description: 'yololol5'},
+      {pid:'6', name: 'prj6', description: 'yololol6'},
+      {pid:'7', name: 'prj7', description: 'yololol7'},
+      {pid:'8', name: 'prj8', description: 'yololol8'}
     ];
 
     $scope.selectedItem = '';
@@ -45,6 +48,14 @@ angular.module('devsynProject')
       //else {
       //  this.selectedItem = '';
       //}
+    };
+
+    $scope.gotImage = function(project){
+      if(project.image === ''){
+        return false;
+      }else{
+        return true;
+      }
     };
 
     $scope.projects.range = function() {

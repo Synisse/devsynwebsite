@@ -13,5 +13,44 @@
     <div class="row" ng-repeat="i in projects.range()">
         <div class="col-lg-4" ng-repeat="project in projects.slice(i,i+3)">
             <h4 ng-click="selectItem(project)">{{project.name}}</h4>
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	             <div class="flipper">
+		               <div class="front">
+                     <div class="fronttitle">
+                       {{project.name}}
+                     </div>
+
+                     <div class="progress">
+                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{project.percent}}%">
+                         <!--<span class="sr-only">-->
+                           {{project.percent}}% Complete
+                         <!--   </span>-->
+                       </div>
+                     </div>
+
+                     <div class="frontimg">
+                       <div ng-show="gotImage(project)">
+                         <img src="{{project.image}}" width="200px">
+                       </div>
+                     </div>
+
+		               </div>
+		               <div class="back">
+                     <div class="projecttitle">
+                       {{project.name}}
+                     </div>
+                     <div class="projecttech">
+                       <div ng-repeat="tech in project.technology">
+                         {{tech}}
+                       </div>
+                     </div>
+                     <div class="projectdescription">
+                       {{project.description}}
+                     </div>
+			                  <!-- back content -->
+                        {{project.description}}
+		               </div>
+	            </div>
+            </div>
         </div>
     </div>

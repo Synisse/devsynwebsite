@@ -170,6 +170,7 @@ a.symbol:before {
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
+  margin-bottom: 3px;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {

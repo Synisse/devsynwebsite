@@ -21,13 +21,15 @@ angular.module('devsynProject')
         description: 'Programmed a small basic OpenGL Game.',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 100},
-    	{pid:'2', name: 'prj2', description: 'yololol2'},
-      {pid:'3', name: 'prj3', description: 'yololol3'},
-      {pid:'4', name: 'prj4', description: 'yololol4'},
-      {pid:'5', name: 'prj5', description: 'yololol5'},
-      {pid:'6', name: 'prj6', description: 'yololol6'},
-      {pid:'7', name: 'prj7', description: 'yololol7'},
-      {pid:'8', name: 'prj8', description: 'yololol8'}
+    	{pid:'2', name: 'Ambient Intelligence', technology:['C++', 'C#', 'JavaEE', 'Hibernate', 'Wicket','Visual Studio', 'Glut'], description: 'yololol2'},
+      {pid:'3', name: 'Neural Network', description: 'yololol3'},
+      {pid:'4', name: 'Q-Learning', description: 'yololol4'},
+      {pid:'5', name: 'Face Recognition', description: 'yololol5'},
+      {pid:'6', name: 'Action Paintball', description: 'yololol6'},
+      {pid:'7', name: 'Action Sudoku', description: 'yololol7'},
+      {pid:'8', name: 'Hybrid App', description: 'yololol8'},
+      {pid:'9', name: 'Forex Clock', description: 'yololol8'},
+      {pid:'0', name: 'Devsyn Website', description: 'yololol8'}
     ];
 
     $scope.selectedItem = '';

@@ -18,11 +18,11 @@ angular.module('devsynProject')
 
     $scope.projects = [
     	{name: 'prj1', description: 'yololol'},
-    	{name: 'prj2', description: 'yololol2'},      
+    	{name: 'prj2', description: 'yololol2'},
       {name: 'prj3', description: 'yololol3'},
       {name: 'prj4', description: 'yololol4'},
       {name: 'prj5', description: 'yololol'},
-      {name: 'prj6', description: 'yololol2'},      
+      {name: 'prj6', description: 'yololol2'},
       {name: 'prj7', description: 'yololol3'},
       {name: 'prj8', description: 'yololol4'}
     ];
@@ -30,7 +30,8 @@ angular.module('devsynProject')
     $scope.selectedItem = '';
 
     $scope.isSelected = function (){
-      if(this.selectedItem === ''){
+      console.log('isslected called');
+      if($scope.selectedItem === ''){
         return false;
       } else {
         return true;
@@ -38,11 +39,12 @@ angular.module('devsynProject')
     };
 
     $scope.selectItem = function(project){
-      if(this.selectedItem === ''){
-        this.selectedItem = project;
-      } else {
-        this.selectedItem = '';
-      }
+      //if($scope.selectedItem === ''){
+        $scope.selectedItem = project.name;
+      //}
+      //else {
+      //  this.selectedItem = '';
+      //}
     };
 
     $scope.projects.range = function() {

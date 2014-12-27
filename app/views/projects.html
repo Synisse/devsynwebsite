@@ -3,17 +3,15 @@
 </div>
 
 <div ng-show="isSelected()">
-	{{selectedItem}}
+	Selected: {{selectedItem}} {{yolo}}
 </div>
 <div ng-show="!isSelected()">
-	No ItemSelected
+	No Item selected
 </div>
 
 
     <div class="row" ng-repeat="i in projects.range()">
         <div class="col-lg-4" ng-repeat="project in projects.slice(i,i+3)">
-            <h4>{{project.name}}</h4>
+            <h4 ng-click="selectItem(project)">{{project.name}}</h4>
         </div>
-    </div>	
-
-<!-- </div> -->
+    </div>

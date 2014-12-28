@@ -17,19 +17,85 @@ angular.module('devsynProject')
     ];
 
     $scope.projects = [
-    	{pid:'1', name: 'OpenGL-Game', technology:['C++','Visual Studio', 'Glut'],
+    	{
+        pid:'1',
+        name: 'OpenGL-Game',
+        technology:['C++','Visual Studio', 'Glut'],
         description: 'Programmed a small basic OpenGL Game.',
         image: 'http://i.imgur.com/JSwz5Az.png',
-        percent: 100},
-    	{pid:'2', name: 'Ambient Intelligence', technology:['C++', 'C#', 'JavaEE', 'Hibernate', 'Wicket','Visual Studio', 'Glut'], description: 'yololol2'},
-      {pid:'3', name: 'Neural Network', description: 'yololol3'},
-      {pid:'4', name: 'Q-Learning', description: 'yololol4'},
-      {pid:'5', name: 'Face Recognition', description: 'yololol5'},
-      {pid:'6', name: 'Action Paintball', description: 'yololol6'},
-      {pid:'7', name: 'Action Sudoku', description: 'yololol7'},
-      {pid:'8', name: 'Hybrid App', description: 'yololol8'},
-      {pid:'9', name: 'Forex Clock', description: 'yololol8'},
-      {pid:'0', name: 'Devsyn Website', description: 'yololol8'}
+        percent: 100
+      },
+    	{
+        pid:'2',
+        name: 'Ambient Intelligence',
+        description: 'yololol2',
+        image: 'http://i.imgur.com/dockT8c.jpg',
+        percent: 100
+      },
+      {
+        pid:'3',
+        name: 'Neural Network',
+        technology:[],
+        description: 'yololol3',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 100
+      },
+      {
+        pid:'4',
+        name: 'Q-Learning',
+        technology:[],
+        description: 'yololol4',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 100
+      },
+      {
+        pid:'5',
+        name: 'Face Recognition',
+        technology:[],
+        description: 'yololol5',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 100
+      },
+      {
+        pid:'6',
+        name: 'Action Paintball',
+        technology:[],
+        description: 'yololol6',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 30
+      },
+      {
+        pid:'7',
+        name: 'Action Sudoku',
+        technology:[],
+        description: 'yololol7',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 10
+      },
+      {
+        pid:'8',
+        name: 'Hybrid App',
+        technology:[],
+        description: 'yololol8',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 80
+      },
+      {
+        pid:'9',
+        name: 'Forex Clock',
+        technology:[],
+        description: 'yololol8',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 100
+      },
+      {
+        pid:'0',
+        name: 'Devsyn Website',
+        technology:[],
+        description: 'yololol8',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 50
+      }
     ];
 
     $scope.selectedItem = '';

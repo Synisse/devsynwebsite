@@ -14,6 +14,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   padding-top: 10px;
   padding-bottom: 20px;
+  //background-image:url("http://colourlovers.com.s3.amazonaws.com/images/patterns/247/247059.png");
+  background-image:url("http://i.imgur.com/IOJbfAB.png");
+  background-repeat: repeat-xy;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -73,6 +76,7 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
+    font-family: 'Slabo 27px', serif;
   }
 
   /* Remove the padding we set earlier */
@@ -118,7 +122,7 @@ a.symbol:before {
 
 .bigiconfont{
   font-size : 300%;
-  color : #232323;
+  color : #F7A305;
   text-align: center;
 }
 
@@ -130,21 +134,21 @@ a.symbol:before {
 
 .fullnavbar{
   margin-top: 20px;
-  background-color: #D1FAC5;
-  -webkit-box-shadow: 0px 8px 7px 0px rgba(50, 50, 50, 0.66);
-  -moz-box-shadow:    0px 8px 7px 0px rgba(50, 50, 50, 0.66);
-  box-shadow:         0px 8px 7px 0px rgba(50, 50, 50, 0.66);
+  background-color: #000000; //F7A305 (orange) D1FAC5 (mint)
+  -webkit-box-shadow: 0px 8px 7px 0px rgba(70, 70, 70, 0.66);
+  -moz-box-shadow:    0px 8px 7px 0px rgba(70, 70, 70, 0.66);
+  box-shadow:         0px 8px 7px 0px rgba(70, 70, 70, 0.66);
 }
 
 .menuitem {
-
     // Links rendered as pills
     > a {
       border-radius: 5px;
-      color: #232323;
+      color: #F7A305;
       &:hover{
         text-decoration: none;
         font-weight: bold;
+        color: #F7A305;
       }
     }
     + li {
@@ -156,7 +160,8 @@ a.symbol:before {
       &,
       &:hover,
       &:focus {
-        color: red;
+        //color: red;
+        text-decoration: none;
         background-color: green;
       }
     }
@@ -221,4 +226,10 @@ a.symbol:before {
 
 .frontimg{
   text-align:center;
+
+}
+
+.frontimage{
+  border: 2px solid;
+  border-radius:5px;
 }

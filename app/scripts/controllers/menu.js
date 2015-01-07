@@ -7,6 +7,7 @@
  * # MenuCtrl
  * Controller of the devsynProject
  */
+// angular.module('devsynProject', ['ui.bootstrap'])
 angular.module('devsynProject')
   .controller('MenuCtrl', function ($scope, $location) {
     $scope.awesomeThings = [

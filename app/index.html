@@ -12,7 +12,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
   </head>
   <body ng-app="devsynProject">
@@ -52,29 +52,29 @@
         <h3 class="text-muted">yeomantest</h3> -->
       </div>
 
-      <div ng-view=""></div>
+      <div ng-view="" class="maincontent"></div>
 
       <div class="footer">
         <div class="row">
-        <div class="col-lg-2">
+        <div class="col-lg-2 col-md-2 col-sm-2 ">
         </div>
         <a target="_blank" href="https://twitter.com/Synisse87">
-        <div class="col-lg-2 symbol">
+        <div class="col-lg-2 col-md-2 col-sm-2 symbol">
 
           <div class="bigiconfont">circletwitterbird</div>
 
         </div>
         </a>
-        <div class="col-lg-2 symbol">
+        <div class="col-lg-2 col-md-2 col-sm-2 symbol">
           <div class="bigiconfont">circlegoogleplus</div>
         </div>
-        <div class="col-lg-2 symbol">
+        <div class="col-lg-2 col-md-2 col-sm-2 symbol">
           <div class="bigiconfont">circlegithubalt</div>
         </div>
-        <div class="col-lg-2 symbol">
+        <div class="col-lg-2 col-md-2 col-sm-2 symbol">
           <div class="bigiconfont">circlexing</div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2 col-md-2 col-sm-2 ">
         </div>
       </div>
       </div>
@@ -122,14 +122,16 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/menu.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/projects.js"></script>
         <script src="scripts/controllers/contact.js"></script>
         <script src="scripts/filters/partition.js"></script>

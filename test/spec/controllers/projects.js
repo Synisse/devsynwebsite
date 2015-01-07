@@ -3,7 +3,7 @@
 describe('Controller: ProjectsCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('devsynProject'));
+  beforeEach(module('devsynProject'),['ui.bootstrap']);
 
   var ProjectsCtrl,
     scope;

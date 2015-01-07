@@ -10,6 +10,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 /* Space out content a bit */
 body {
   padding-top: 10px;
@@ -29,7 +33,7 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 0px solid #e5e5e5;
   padding-top: 80px;
 
   /* Make the masthead heading the same height as the navigation */
@@ -46,6 +50,11 @@ body {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+//   position:fixed;
+//   bottom:0;
+//   width:720px;
+//   height:100px;
+//   z-index:10;
 }
 
 .container-narrow > hr {
@@ -76,7 +85,7 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Open Sans', sans-serif;
   }
 
   /* Remove the padding we set earlier */
@@ -134,6 +143,8 @@ a.symbol:before {
 
 .fullnavbar{
   margin-top: 20px;
+  border-top: 1px solid #fda000;
+  border-bottom: 1px solid #fda000;
   background-color: #000000; //F7A305 (orange) D1FAC5 (mint)
   -webkit-box-shadow: 0px 8px 7px 0px rgba(70, 70, 70, 0.66);
   -moz-box-shadow:    0px 8px 7px 0px rgba(70, 70, 70, 0.66);
@@ -144,6 +155,7 @@ a.symbol:before {
     // Links rendered as pills
     > a {
       border-radius: 5px;
+      text-decoration: none;
       color: #F7A305;
       &:hover{
         text-decoration: none;
@@ -175,7 +187,7 @@ a.symbol:before {
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
-  margin-bottom: 3px;
+  margin-bottom: 40px;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -183,7 +195,7 @@ a.symbol:before {
 	}
 
 .flip-container, .front, .back {
-	width: 240px;
+	width: 100%;
 	height: 280px;
 }
 
@@ -198,11 +210,12 @@ a.symbol:before {
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-  background-color:#CCCCCC;
+  background-color:#DDDDDD;
 	position: absolute;
 	top: 0;
 	left: 0;
   border-radius: 20px;
+  border: 5px solid #F7A305;
 }
 
 /* front pane, placed above back */
@@ -232,4 +245,30 @@ a.symbol:before {
 .frontimage{
   border: 2px solid;
   border-radius:5px;
+}
+
+.maincontent{
+//  padding-bottom: 100px;
+  z-index:5;
+}
+
+.techitem{
+  float: left;
+}
+
+.projecttech{
+  margin-left:5px;
+}
+
+.projectdescription{
+  float: left;
+  margin-left:5px;
+}
+
+.moreinfo{
+  position: absolute;
+  bottom: 0px;
+  margin-bottom:10px;
+  text-align: center;
+  width: 100%;
 }

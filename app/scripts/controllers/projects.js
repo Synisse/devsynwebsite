@@ -8,19 +8,42 @@
  * Controller of the yeomantestApp
  */
 angular.module('devsynProject')
-  .controller('ProjectsCtrl', ['$scope', function ($scope) {
-
+  .controller('ProjectsCtrl', ['$scope', '$modal', '$log', function ($scope,$modal, $log) {
+    // app.controller('ProjectsCtrl', ['$scope',  function ($scope) {
     $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    'HTML5 Boilerplate',
+    'AngularJS',
+    'Karma'
     ];
+    $scope.selectedItem = '';
+
+    $scope.open = function (size, selectedProject) {
+
+      var modalInstance = $modal.open({
+        templateUrl: 'views/projectmodal.html',
+        controller: function($scope, $modalInstance, project){
+            $scope.project = project;
+          },
+        size: size,
+        resolve: {
+          project: function () {
+            return selectedProject;
+          }
+        }
+      });
+
+      modalInstance.result.then(function (selectedItem) {
+        $scope.selected = selectedItem;
+      }, function () {
+        $log.info('Modal dismissed at: ' + new Date());
+      });
+    };
 
     $scope.projects = [
     	{
         pid:'1',
         name: 'OpenGL-Game',
-        technology:['C++','Visual Studio', 'Glut'],
+        technology:['C++','VS2012', 'Glut', 'gsdf', 'asd', 'dddddf', 'sdsd'],
         description: 'Programmed a small basic OpenGL Game.',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 100
@@ -28,6 +51,7 @@ angular.module('devsynProject')
     	{
         pid:'2',
         name: 'Ambient Intelligence',
+        technology:[],
         description: 'yololol2',
         image: 'http://i.imgur.com/dockT8c.jpg',
         percent: 100
@@ -60,7 +84,7 @@ angular.module('devsynProject')
         pid:'6',
         name: 'Action Paintball',
         technology:[],
-        description: 'yololol6',
+        description: 'see demo',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 30
       },
@@ -68,7 +92,7 @@ angular.module('devsynProject')
         pid:'7',
         name: 'Action Sudoku',
         technology:[],
-        description: 'yololol7',
+        description: 'not yet started',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 10
       },
@@ -76,7 +100,7 @@ angular.module('devsynProject')
         pid:'8',
         name: 'Hybrid App',
         technology:[],
-        description: 'yololol8',
+        description: 'culimatch',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 80
       },
@@ -84,21 +108,29 @@ angular.module('devsynProject')
         pid:'9',
         name: 'Forex Clock',
         technology:[],
-        description: 'yololol8',
+        description: 'forex4noobs',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 100
       },
       {
-        pid:'0',
+        pid:'10',
+        name: 'WCF Game',
+        technology:[],
+        description: 'Rock Paper Scissors Lizard Spock',
+        image: 'http://i.imgur.com/JSwz5Az.png',
+        percent: 100
+      },
+      {
+        pid:'11',
         name: 'Devsyn Website',
         technology:[],
-        description: 'yololol8',
+        description: 'this.website',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 50
       }
     ];
 
-    $scope.selectedItem = '';
+
 
     $scope.isSelected = function (){
       console.log('isslected called');

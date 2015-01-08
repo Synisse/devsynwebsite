@@ -21,9 +21,7 @@ angular.module('devsynProject')
 
       var modalInstance = $modal.open({
         templateUrl: 'views/projectmodal.html',
-        controller: function($scope, $modalInstance, project){
-            $scope.project = project;
-          },
+        controller: 'ProjectsModalCtrl',
         size: size,
         resolve: {
           project: function () {
@@ -165,5 +163,18 @@ angular.module('devsynProject')
       }
       return range;
     };
+
+  }]);
+
+  angular.module('devsynProject')
+  .controller('ProjectsModalCtrl', ['$scope', '$modalInstance','project', function ($scope, $modalInstance, project) {
+    // app.controller('ProjectsCtrl', ['$scope',  function ($scope) {
+    $scope.awesomeThings = [
+    'HTML5 Boilerplate',
+    'AngularJS',
+    'Karma'
+    ];
+
+    $scope.project = project;
 
   }]);

@@ -41,9 +41,14 @@
                      </div>
                      <div class="projecttech">
                        <b>Technology: </b></br>
-                       <div class="techitem" ng-repeat="tech in project.technology">
-                         {{tech}},&nbsp;
+                       <div class="techitem">
+
+                         {{getTechString(project)}}
+
                        </div>
+                       <!-- <div class="techitem" ng-repeat="tech in project.technology">
+                         {{tech}},&nbsp;
+                       </div> -->
                      <br>
                      </div>
                      <div class="projectdescription">

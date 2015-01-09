@@ -41,7 +41,7 @@ angular.module('devsynProject')
     	{
         pid:'1',
         name: 'OpenGL-Game',
-        technology:['C++','VS2012', 'Glut', 'gsdf', 'asd', 'dddddf', 'sdsd'],
+        technology:['C++','VS2012', 'Glut', 'Landscape Generation', 'Fractal Objects', 'Lighting'],
         description: 'Programmed a small basic OpenGL Game.',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 100
@@ -129,6 +129,14 @@ angular.module('devsynProject')
     ];
 
 
+    $scope.getTechString = function(project){
+      var concatTech = '';
+      for (var i = 0; i < project.technology.length; i++) {
+        concatTech += project.technology[i] + ', ';
+      }
+      concatTech = concatTech.substring(0,concatTech.length-2);
+      return concatTech;
+    };
 
     $scope.isSelected = function (){
       console.log('isslected called');

@@ -1,3 +1,30 @@
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <h1>Aboutme</h1>
+</div> -->
+
+<div class="row">
+  <div class="col-lg-8 col-md-8 col-sm-8 aboutText">
+    Hi, I'm Stefan Krüger, 27 and a Software Engineer interested in modern web technologies.
+  </div>
+  <div class="col-lg-4 ol-md-4 col-sm-4">
+    <img class="aboutImage" src="http://i.imgur.com/SMUNJNr.jpg" height="250px">
+  </div>
+</div>
+
+<div class="row aboutStuff">
+  <div class="col-lg-12 aboutTech aboutText">
+    I like to work with stuff like this:
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 arrowDown">
+    <img src="/images/arrowdown.png" height="50px">
+  </div>
+</div>
+
+<div class="row techDiv"  style="background-color: #eaeaea">
+  <div class="col-lg-2 col-md-2 col-sm-3" ng-repeat="techItem in tech">
+    <img src="{{techItem.image}}" width="100%">
+  </div>
 </div>

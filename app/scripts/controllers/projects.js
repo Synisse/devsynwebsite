@@ -41,10 +41,13 @@ angular.module('devsynProject')
     	{
         pid:'1',
         name: 'OpenGL-Game',
-        technology:['C++','VS2012', 'Glut', 'Landscape Generation', 'Fractal Objects', 'Lighting'],
+        technology:['C++','VS2012', 'OpenGL', 'Glut', 'Landscape Generation', 'Fractal Objects', 'Lighting'],
         description: 'A small OpenGL Game.',
         image: 'http://i.imgur.com/JSwz5Az.png',
-        percent: 100
+        percent: 100,
+        youtube: 'http://www.youtube.com/embed/p3XU0tvEy70',
+        screenshots: [],
+        longdescription: ''
       },
     	{
         pid:'2',
@@ -52,7 +55,10 @@ angular.module('devsynProject')
         technology:['C#', 'Java', 'Hibernate', 'Wicket', 'XAML', 'Machine Learning', 'Face Recognition', 'Haar Classifier', 'OpenCV'],
         description: 'An ambient intelligence system to improve the life of a student.',
         image: 'http://i.imgur.com/dockT8c.jpg',
-        percent: 100
+        percent: 100,
+        youtube: '',
+        screenshots: [],
+        longdescription: ''
       },
       {
         pid:'3',
@@ -60,7 +66,10 @@ angular.module('devsynProject')
         technology:['C#', 'WPF', 'XAML', 'Hebbian learning rule'],
         description: 'A Neural Network to classify the color of pixels in a 100x100 Grid.',
         image: 'http://i.imgur.com/yhPE3h6.png',
-        percent: 100
+        percent: 100,
+        youtube: '',
+        screenshots: [],
+        longdescription: ''
       },
       {
         pid:'4',
@@ -68,7 +77,10 @@ angular.module('devsynProject')
         technology:['C#', 'WPF', 'XAML'],
         description: 'Implementation of the Q-Learning algorithm to find the quickest path through randomizable maze.',
         image: 'http://i.imgur.com/V2Vsftv.png',
-        percent: 100
+        percent: 100,
+        youtube: '',
+        screenshots: [],
+        longdescription: ''
       },
       {
         pid:'5',
@@ -76,15 +88,23 @@ angular.module('devsynProject')
         technology:['C++', 'OpenCV', 'Java', 'Android', 'Eigenfaces'],
         description: 'A Face Recognition implementation with openCV.',
         image: 'http://i.imgur.com/eqswyux.png',
-        percent: 100
+        percent: 100,
+        youtube: '',
+        screenshots: [],
+        longdescription: ''
       },
       {
         pid:'6',
         name: 'Action Paintball',
         technology:['Unity3D', 'C#', 'JavaScript', 'Blender', 'Cinema4D'],
-        description: 'A dynamic QuakeIII-styled paintball game. http://devsyn.de/UnityTest/NetworkBuilds/webbuild0123.html',
+        description: 'A dynamic QuakeIII-styled paintball game. ',
         image: 'http://i.imgur.com/2Xef5by.png',
-        percent: 30
+        percent: 30,
+        youtube: '',
+        screenshots: ['http://i.imgur.com/2KKlh46.png'],
+        longdescription: 'A dynamic QuakeIII-styled paintball game built with Unity 3D. You can '+
+          'test the current state of the game right <a target="_blank" href="http://devsyn.de/UnityTest/NetworkBuilds/webbuild0123.html">'+
+          'here </a>.'
       },
       // {
       //   pid:'7',
@@ -100,7 +120,10 @@ angular.module('devsynProject')
         technology:['Sencha Touch', 'JavaScript', 'HTML5', 'CSS3', 'ExtJS', 'iOS', 'Android'],
         description: 'culimatch',
         image: 'http://i.imgur.com/bkid9ze.png',
-        percent: 80
+        percent: 80,
+        youtube: '',
+        screenshots: [],
+        longdescription: ''
       },
       {
         pid:'9',
@@ -108,7 +131,10 @@ angular.module('devsynProject')
         technology:['AngularJS', 'JavaScript', 'PHP', 'Ionic', 'HTML5', 'CSS3', 'Cordova', 'iOS', 'Android', 'Chrome Extensions'],
         description: 'forex4noobs',
         image: 'http://i.imgur.com/gawtIAC.png',
-        percent: 100
+        percent: 100,
+        youtube: '',
+        screenshots: [],
+        longdescription: ''
       },
       {
         pid:'10',
@@ -116,7 +142,10 @@ angular.module('devsynProject')
         technology:['C#', 'WCF', 'WPF', 'XAML'],
         description: 'Implementation of the Rock-Paper-Scissors-Lizard-Spock Game.',
         image: 'http://i.imgur.com/sLcyzlx.png',
-        percent: 100
+        percent: 100,
+        youtube: '',
+        screenshots: [],
+        longdescription: ''
       },
       {
         pid:'11',
@@ -124,7 +153,10 @@ angular.module('devsynProject')
         technology:['XML', 'MathML', 'Java', 'Android'],
         description: 'Android App to learn some basic Math.',
         image: 'http://i.imgur.com/pisE9OW.png',
-        percent: 70
+        percent: 70,
+        youtube: '',
+        screenshots: [],
+        longdescription: ''
       },
       {
         pid:'11',
@@ -132,7 +164,10 @@ angular.module('devsynProject')
         technology:['MongoDB', 'Express', 'AngularJS', 'NodeJS', 'HTML5', 'CSS3', 'Yeoman', 'Grunt', 'Bower', 'Sass'],
         description: 'this.website',
         image: 'http://i.imgur.com/Xpq8Scm.png',
-        percent: 50
+        percent: 50,
+        youtube: '',
+        screenshots: [],
+        longdescription: ''
       }
     ];
 
@@ -200,6 +235,47 @@ angular.module('devsynProject')
     'AngularJS',
     'Karma'
     ];
+
+    $scope.hasVideo = function (project){
+      console.log('called');
+      if(project.youtube === ''){
+        return false;
+      }
+
+      return true;
+
+    };
+
+    $scope.hasScreenshots = function (project){
+
+      console.log(project.screenshots.length);
+      if(project.screenshots.length === 0){
+          return false;
+      }
+
+      return true;
+    };
+
+    $scope.hasLongDescription = function (project){
+      if(project.longdescription === ''){
+        return false;
+      }
+
+      return true;
+    };
+
+    $scope.cancel = function () {
+      $modalInstance.dismiss('cancel');
+    };
+
+    $scope.getTechString = function(project){
+      var concatTech = '';
+      for (var i = 0; i < project.technology.length; i++) {
+        concatTech += project.technology[i] + ', ';
+      }
+      concatTech = concatTech.substring(0,concatTech.length-2);
+      return concatTech;
+    };
 
     $scope.project = project;
 

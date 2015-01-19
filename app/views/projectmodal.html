@@ -1,15 +1,46 @@
 <div class="modal-content modalContent">
-  <div class="modalHeader">
+
+  <div class="modalHeader bottomBorderOrange">
     {{project.name}}
   </div>
 
-  <div class="modalDescription">
+  <div class="modalTitleHeader">Technology</div>
+  <div class="modalTech bottomBorderOrange">
+    {{getTechString(project)}}
+  </div>
 
+
+  <div class="modalTitleHeader" ng-show="hasVideo(project)">Video</div>
+  <div class="modalVideo bottomBorderOrange" ng-show="hasVideo(project)">
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/p3XU0tvEy70" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="modalTitleHeader" ng-show="hasScreenshots(project)">
+    Screenshots
+  </div>
+  <div class="modalScreenshot bottomBorderOrange" ng-show="hasScreenshots(project)">
+    sss
+    <div ng-repeat="screenshot in project.screenshots">
+      <img src="{{screenshot}}" width="100%">
+    </div>
+  </div>
+
+
+  <div class="modalTitleHeader">Description</div>
+  <div class="modalDescription bottomBorderOrange">
+    <div class="shortDescription" ng-show="!hasLongDescription(project)">
+      {{project.description}}
+    </div>
+    <div class="longDescription" ng-bind-html="project.longdescription" ng-show="hasLongDescription(project)">
+
+    </div>
 
   </div>
 
-  <div class="modalVideo">
-    <iframe width="560" height="315" src="//www.youtube.com/embed/p3XU0tvEy70" frameborder="0" allowfullscreen></iframe>
+  <div class="moreinfo">
+    <button type="button" class="btn btn-success" ng-click="cancel()">
+      Close
+    </button>
   </div>
 
 </div>

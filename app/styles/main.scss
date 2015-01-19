@@ -17,6 +17,7 @@ $orange-sec: #F7A305;
 $orange-third: #fda000;
 $grey-main: #303030;
 $lightgrey-main: #aaaaaa;
+$grey-font: #eaeaea;
 
 
 html {
@@ -296,10 +297,12 @@ a.symbol:before {
 .modalContent{
   background-color: $grey-main;
   border:3px solid $orange-main;
+  font-family: 'Ubuntu Condensed', sans-serif;
+
 }
 
 .modalHeader{
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 5px;
   text-align: center;
   font-weight: bold;
@@ -307,12 +310,34 @@ a.symbol:before {
   color: #d8d5d5;
 }
 
-.modalDescription{
+.bottomBorderOrange{
+  margin-right: 100px;
+  margin-left: 100px;
+  padding-bottom:20px;
+  border-bottom: 1px solid $orange-main;
+}
 
+.modalDescription{
+  color: $grey-font;
+  margin-bottom: 70px;
 }
 
 .modalVideo{
+  margin-top: 20px;
   text-align: center;
+}
+
+.modalTech{
+  color: $grey-font;
+}
+
+.modalTitleHeader{
+  color: $orange-main;
+  line-height: 1;
+  font-size:110%;
+  margin-left: 100px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .aboutImage{

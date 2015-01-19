@@ -38,6 +38,10 @@ angular
         controller: 'ProjectsCtrl',
         filter: 'partition'
       })
+      .when('/impressum', {
+        templateUrl: 'views/impressum.html',
+        controller: 'ImpressumCtrl'
+      })
       .when('/contact', {
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'

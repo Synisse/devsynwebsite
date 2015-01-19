@@ -8,7 +8,7 @@
  * Controller of the yeomantestApp
  */
 angular.module('devsynProject')
-  .controller('ProjectsCtrl', ['$scope', '$modal', '$log', function ($scope,$modal, $log) {
+  .controller('ProjectsCtrl', ['$scope', '$modal', '$log', '$http', function ($scope,$modal, $log, $http) {
     // app.controller('ProjectsCtrl', ['$scope',  function ($scope) {
     $scope.awesomeThings = [
     'HTML5 Boilerplate',
@@ -42,92 +42,110 @@ angular.module('devsynProject')
         pid:'1',
         name: 'OpenGL-Game',
         technology:['C++','VS2012', 'Glut', 'Landscape Generation', 'Fractal Objects', 'Lighting'],
-        description: 'Programmed a small basic OpenGL Game.',
+        description: 'A small OpenGL Game.',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 100
       },
     	{
         pid:'2',
         name: 'Ambient Intelligence',
-        technology:[],
-        description: 'yololol2',
+        technology:['C#', 'Java', 'Hibernate', 'Wicket', 'XAML', 'Machine Learning', 'Face Recognition', 'Haar Classifier', 'OpenCV'],
+        description: 'An ambient intelligence system to improve the life of a student.',
         image: 'http://i.imgur.com/dockT8c.jpg',
         percent: 100
       },
       {
         pid:'3',
         name: 'Neural Network',
-        technology:[],
-        description: 'yololol3',
-        image: 'http://i.imgur.com/JSwz5Az.png',
+        technology:['C#', 'WPF', 'XAML', 'Hebbian learning rule'],
+        description: 'A Neural Network to classify the color of pixels in a 100x100 Grid.',
+        image: 'http://i.imgur.com/yhPE3h6.png',
         percent: 100
       },
       {
         pid:'4',
         name: 'Q-Learning',
-        technology:[],
-        description: 'yololol4',
-        image: 'http://i.imgur.com/JSwz5Az.png',
+        technology:['C#', 'WPF', 'XAML'],
+        description: 'Implementation of the Q-Learning algorithm to find the quickest path through randomizable maze.',
+        image: 'http://i.imgur.com/V2Vsftv.png',
         percent: 100
       },
       {
         pid:'5',
         name: 'Face Recognition',
-        technology:[],
-        description: 'yololol5',
-        image: 'http://i.imgur.com/JSwz5Az.png',
+        technology:['C++', 'OpenCV', 'Java', 'Android', 'Eigenfaces'],
+        description: 'A Face Recognition implementation with openCV.',
+        image: 'http://i.imgur.com/eqswyux.png',
         percent: 100
       },
       {
         pid:'6',
         name: 'Action Paintball',
-        technology:[],
-        description: 'see demo',
-        image: 'http://i.imgur.com/JSwz5Az.png',
+        technology:['Unity3D', 'C#', 'JavaScript', 'Blender', 'Cinema4D'],
+        description: 'A dynamic QuakeIII-styled paintball game. http://devsyn.de/UnityTest/NetworkBuilds/webbuild0123.html',
+        image: 'http://i.imgur.com/2Xef5by.png',
         percent: 30
       },
-      {
-        pid:'7',
-        name: 'Action Sudoku',
-        technology:[],
-        description: 'not yet started',
-        image: 'http://i.imgur.com/JSwz5Az.png',
-        percent: 10
-      },
+      // {
+      //   pid:'7',
+      //   name: 'Action Sudoku',
+      //   technology:['Unity3D', 'C#', 'JavaScript'],
+      //   description: 'not yet started',
+      //   image: 'http://i.imgur.com/JSwz5Az.png',
+      //   percent: 10
+      // },
       {
         pid:'8',
         name: 'Hybrid App',
-        technology:[],
+        technology:['Sencha Touch', 'JavaScript', 'HTML5', 'CSS3', 'ExtJS', 'iOS', 'Android'],
         description: 'culimatch',
-        image: 'http://i.imgur.com/JSwz5Az.png',
+        image: 'http://i.imgur.com/bkid9ze.png',
         percent: 80
       },
       {
         pid:'9',
         name: 'Forex Clock',
-        technology:[],
+        technology:['AngularJS', 'JavaScript', 'PHP', 'Ionic', 'HTML5', 'CSS3', 'Cordova', 'iOS', 'Android', 'Chrome Extensions'],
         description: 'forex4noobs',
-        image: 'http://i.imgur.com/JSwz5Az.png',
+        image: 'http://i.imgur.com/gawtIAC.png',
         percent: 100
       },
       {
         pid:'10',
         name: 'WCF Game',
-        technology:[],
-        description: 'Rock Paper Scissors Lizard Spock',
-        image: 'http://i.imgur.com/JSwz5Az.png',
+        technology:['C#', 'WCF', 'WPF', 'XAML'],
+        description: 'Implementation of the Rock-Paper-Scissors-Lizard-Spock Game.',
+        image: 'http://i.imgur.com/sLcyzlx.png',
         percent: 100
       },
       {
         pid:'11',
+        name: 'ExamDroid',
+        technology:['XML', 'MathML', 'Java', 'Android'],
+        description: 'Android App to learn some basic Math.',
+        image: 'http://i.imgur.com/pisE9OW.png',
+        percent: 70
+      },
+      {
+        pid:'11',
         name: 'Devsyn Website',
-        technology:[],
+        technology:['MongoDB', 'Express', 'AngularJS', 'NodeJS', 'HTML5', 'CSS3', 'Yeoman', 'Grunt', 'Bower', 'Sass'],
         description: 'this.website',
-        image: 'http://i.imgur.com/JSwz5Az.png',
+        image: 'http://i.imgur.com/Xpq8Scm.png',
         percent: 50
       }
     ];
 
+    $scope.projectstwo = '';
+
+    $http.get('https://frozen-brook-4202.herokuapp.com/projects').
+      success(function(data){
+        $scope.projectstwo = data;
+        console.log('projectsdone');
+      }).
+      error(function(){
+        //todo
+      });
 
     $scope.getTechString = function(project){
       var concatTech = '';

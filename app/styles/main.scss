@@ -3,6 +3,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -43,7 +45,7 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 0px solid #e5e5e5;
-  padding-top: 110px;
+  padding-top: 50px;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -149,6 +151,7 @@ a.symbol:before {
   font-size : 150%;
   color : #232323;
   text-align: center;
+  font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .fullnavbar{
@@ -378,4 +381,8 @@ a.symbol:before {
 
 .bottomspacer{
   margin-bottom: 20px;
+}
+
+.graduate{
+  margin-top:50px;
 }

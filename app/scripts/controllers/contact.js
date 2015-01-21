@@ -18,6 +18,8 @@ angular.module('devsynProject')
 
     $scope.success = false;
     $scope.error = false;
+
+    //Send mail function for contact form
     $scope.send = function () {
 
       var htmlBody = '<div>Name: ' + $scope.user.name + '</div>' +
@@ -37,7 +39,7 @@ angular.module('devsynProject')
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          'X-Postmark-Server-Token': 'asd'
+          'X-Postmark-Server-Token': 'addtokenhere'
         }
       }).
       success(function () {
@@ -49,6 +51,7 @@ angular.module('devsynProject')
       });
     };
 
+    //Social icon list for contact information
     $scope.socialLinks = [
       {
         name : 'Xing',

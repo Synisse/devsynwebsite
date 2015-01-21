@@ -37,6 +37,8 @@ angular.module('devsynProject')
       });
     };
 
+    //Current placeholder for project data
+    //Pulled from backend in the future
     $scope.projects = [
     	{
         pid:'1',
@@ -173,6 +175,7 @@ angular.module('devsynProject')
 
     $scope.projectstwo = '';
 
+    //API call to get the project data
     $http.get('https://frozen-brook-4202.herokuapp.com/projects').
       success(function(data){
         $scope.projectstwo = data;
@@ -182,6 +185,7 @@ angular.module('devsynProject')
         //todo
       });
 
+    //Function to build a usable string from the project's tech array
     $scope.getTechString = function(project){
       var concatTech = '';
       for (var i = 0; i < project.technology.length; i++) {
@@ -227,9 +231,10 @@ angular.module('devsynProject')
 
   }]);
 
+
+  //Controller for the popup modals of the project details
   angular.module('devsynProject')
   .controller('ProjectsModalCtrl', ['$scope', '$modalInstance','project', function ($scope, $modalInstance, project) {
-    // app.controller('ProjectsCtrl', ['$scope',  function ($scope) {
     $scope.awesomeThings = [
     'HTML5 Boilerplate',
     'AngularJS',
@@ -247,8 +252,6 @@ angular.module('devsynProject')
     };
 
     $scope.hasScreenshots = function (project){
-
-      console.log(project.screenshots.length);
       if(project.screenshots.length === 0){
           return false;
       }

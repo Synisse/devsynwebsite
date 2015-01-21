@@ -10,12 +10,13 @@
 // angular.module('devsynProject', ['ui.bootstrap'])
 angular.module('devsynProject')
   .controller('MenuCtrl', function ($scope, $location) {
+    
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-    $scope.testString = 'teststring';
+
     $scope.getClass = function(path) {
     	if($location.path().substr(0,path.length) === path) {
     		return 'active';

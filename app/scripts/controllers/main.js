@@ -15,6 +15,7 @@ angular.module('devsynProject')
       'Karma'
     ];
 
+    //Array of techimages for the aboutpage techlist
     $scope.tech = [
       {
         tid:'1',

@@ -1,32 +1,18 @@
-<!--<div class="jumbotron">
-  <h1>Projects2</h1>
-</div>
-
-<div ng-show="isSelected()">
-	Selected: {{selectedItem}} {{yolo}}
-</div>
-<div ng-show="!isSelected()">
-	No Item selected
-</div>
--->
-
     <div class="row" ng-repeat="i in projects.range()">
         <div class="col-lg-4" ng-repeat="project in projects.slice(i,i+3)">
             <!--<h4 ng-click="selectItem(project)">{{project.name}}</h4>-->
             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 	             <div class="flipper">
+
 		               <div class="front">
+
                      <div class="fronttitle">
                        {{project.name}}
                      </div>
 
-
-
                      <div class="progress">
                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{project.percent}}%">
-                         <!--<span class="sr-only">-->
                            {{project.percent}}% Complete
-                         <!--   </span>-->
                        </div>
                      </div>
 
@@ -37,31 +23,28 @@
                      </div>
 
 		               </div>
+
 		               <div class="back">
+
                      <div class="fronttitle">
                        {{project.name}}
                      </div>
+
                      <div class="projecttech">
                        <b>Technology: </b></br>
                        <div class="techitem">
-
                          {{getTechString(project)}}
-
                        </div>
-                       <!-- <div class="techitem" ng-repeat="tech in project.technology">
-                         {{tech}},&nbsp;
-                       </div> -->
                      <br>
                      </div>
+
                      <div class="projectdescription">
-                     <b>Description: </b></br>
-                     <div class="techitem">
-                       {{project.description}}
+                       <b>Description: </b></br>
+                       <div class="techitem">
+                         {{project.description}}
+                       </div>
                      </div>
-                     </div>
-                     <!-- <div class="moreinfo">
-                       <a ng-click="open('lg',{{project}})">More</a>
-                     </div> -->
+
                      <div class="moreinfo">
                        <button type="button" class="btn btn-success" ng-click="open('lg',{{project}})">
                          More

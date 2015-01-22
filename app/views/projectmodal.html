@@ -12,7 +12,7 @@
 
   <div class="modalTitleHeader" ng-show="hasVideo(project)">Video</div>
   <div class="modalVideo bottomBorderOrange" ng-show="hasVideo(project)">
-    <iframe width="560" height="315" src="http://www.youtube.com/embed/p3XU0tvEy70" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="{{trustedSource(project.youtube)}}" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div class="modalTitleHeader" ng-show="hasScreenshots(project)">
@@ -26,6 +26,11 @@
   </div>
 
 
+  <div class="modalTitleHeader" ng-show="hasSourceCode(project)">Source</div>
+  <div class="modalSource bottomBorderOrange greyfont" ng-show="hasSourceCode(project)">
+    You can find the source code of this project: <a href="{{project.sourcecode}}" target="_blank">here</a>
+  </div>
+
   <div class="modalTitleHeader">Description</div>
   <div class="modalDescription bottomBorderOrange">
     <div class="shortDescription" ng-show="!hasLongDescription(project)">
@@ -36,6 +41,7 @@
     </div>
 
   </div>
+
 
   <div class="moreinfo">
     <button type="button" class="btn btn-success" ng-click="cancel()">

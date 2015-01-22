@@ -44,23 +44,28 @@ angular.module('devsynProject')
         pid:'1',
         name: 'OpenGL-Game',
         technology:['C++','VS2012', 'OpenGL', 'Glut', 'Landscape Generation', 'Fractal Objects', 'Lighting'],
-        description: 'A small OpenGL Game.',
+        description: 'A basic OpenGL Game.',
         image: 'http://i.imgur.com/JSwz5Az.png',
         percent: 100,
         youtube: 'http://www.youtube.com/embed/p3XU0tvEy70',
         screenshots: [],
-        longdescription: ''
+        longdescription: 'This game was programmed from scratch with C++ and the OpenGL Utility Toolkit. During '+
+        'this project I dealt with topics like multiple viewports, ambient lighting, generated landscapes, object selections, fractal objects and '+
+        'the performance of the game.',
+        sourcecode: 'https://github.com/Synisse/OpenGLGame'
       },
     	{
         pid:'2',
         name: 'Ambient Intelligence',
-        technology:['C#', 'Java', 'Hibernate', 'Wicket', 'XAML', 'Machine Learning', 'Face Recognition', 'Haar Classifier', 'OpenCV'],
+        technology:['C#', 'JavaEE', 'Hibernate', 'Wicket', 'Android', 'Machine Learning', 'Face Recognition', 'Haar Classifier', 'OpenCV'],
         description: 'An ambient intelligence system to improve the life of a student.',
         image: 'http://i.imgur.com/dockT8c.jpg',
         percent: 100,
-        youtube: '',
+        youtube: 'http://www.youtube.com/embed/ubRLwzv8CtI',
         screenshots: [],
-        longdescription: ''
+        longdescription: 'During my minor in Ambient Intelligence I was working in a team of five people on a project that should simplify the life '+
+          'of a student at our university. This was a challenging project since it involved multiple topics such as face recognition, machine learning, mobile devices.',
+        sourcecode: ''
       },
       {
         pid:'3',
@@ -71,7 +76,8 @@ angular.module('devsynProject')
         percent: 100,
         youtube: '',
         screenshots: [],
-        longdescription: ''
+        longdescription: 'Implementation of a neural network with an adjustable amount of hidden layers and neurons.',
+        sourcecode: ''
       },
       {
         pid:'4',
@@ -82,7 +88,8 @@ angular.module('devsynProject')
         percent: 100,
         youtube: '',
         screenshots: [],
-        longdescription: ''
+        longdescription: '',
+        sourcecode: ''
       },
       {
         pid:'5',
@@ -93,7 +100,8 @@ angular.module('devsynProject')
         percent: 100,
         youtube: '',
         screenshots: [],
-        longdescription: ''
+        longdescription: '',
+        sourcecode: ''
       },
       {
         pid:'6',
@@ -106,7 +114,8 @@ angular.module('devsynProject')
         screenshots: ['http://i.imgur.com/2KKlh46.png'],
         longdescription: 'A dynamic QuakeIII-styled paintball game built with Unity 3D. You can '+
           'test the current state of the game right <a target="_blank" href="http://devsyn.de/UnityTest/NetworkBuilds/webbuild0123.html">'+
-          'here </a>.'
+          'here </a>.',
+        sourcecode: ''
       },
       // {
       //   pid:'7',
@@ -125,7 +134,8 @@ angular.module('devsynProject')
         percent: 80,
         youtube: '',
         screenshots: [],
-        longdescription: ''
+        longdescription: '',
+        sourcecode: ''
       },
       {
         pid:'9',
@@ -136,7 +146,8 @@ angular.module('devsynProject')
         percent: 100,
         youtube: '',
         screenshots: [],
-        longdescription: ''
+        longdescription: '',
+        sourcecode: ''
       },
       {
         pid:'10',
@@ -147,7 +158,8 @@ angular.module('devsynProject')
         percent: 100,
         youtube: '',
         screenshots: [],
-        longdescription: ''
+        longdescription: '',
+        sourcecode: ''
       },
       {
         pid:'11',
@@ -158,7 +170,8 @@ angular.module('devsynProject')
         percent: 70,
         youtube: '',
         screenshots: [],
-        longdescription: ''
+        longdescription: '',
+        sourcecode: ''
       },
       {
         pid:'11',
@@ -169,7 +182,8 @@ angular.module('devsynProject')
         percent: 50,
         youtube: '',
         screenshots: [],
-        longdescription: ''
+        longdescription: '',
+        sourcecode: 'https://github.com/Synisse/devsynwebsite'
       }
     ];
 
@@ -234,16 +248,29 @@ angular.module('devsynProject')
 
   //Controller for the popup modals of the project details
   angular.module('devsynProject')
-  .controller('ProjectsModalCtrl', ['$scope', '$modalInstance','project', function ($scope, $modalInstance, project) {
+  .controller('ProjectsModalCtrl', ['$scope', '$modalInstance','project', '$sce', function ($scope, $modalInstance, project, $sce) {
     $scope.awesomeThings = [
     'HTML5 Boilerplate',
     'AngularJS',
     'Karma'
     ];
 
+    //This snippet is needed to include external URLs
+    $scope.trustedSource = function(videoURL) {
+      return $sce.trustAsResourceUrl(videoURL);
+    };
+
     $scope.hasVideo = function (project){
-      console.log('called');
       if(project.youtube === ''){
+        return false;
+      }
+
+      return true;
+
+    };
+
+    $scope.hasSourceCode = function (project){
+      if(project.sourcecode === ''){
         return false;
       }
 

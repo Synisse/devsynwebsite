@@ -331,6 +331,13 @@ a.symbol:before {
   color: $grey-font;
 }
 
+.modalSource{
+  margin-top: 20px; 
+  a {
+    color: $orange-main;
+  }
+}
+
 .modalTitleHeader{
   color: $orange-main;
   line-height: 1;

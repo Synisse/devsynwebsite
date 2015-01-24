@@ -96,7 +96,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 830px;
     //font-family: 'Open Sans', sans-serif;
     font-family: 'Ubuntu Condensed', sans-serif;
   }
@@ -332,7 +332,7 @@ a.symbol:before {
 }
 
 .modalSource{
-  margin-top: 20px; 
+  margin-top: 20px;
   a {
     color: $orange-main;
   }

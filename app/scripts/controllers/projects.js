@@ -9,7 +9,6 @@
  */
 angular.module('devsynProject')
   .controller('ProjectsCtrl', ['$scope', '$modal', '$log', '$http', function ($scope,$modal, $log, $http) {
-    // app.controller('ProjectsCtrl', ['$scope',  function ($scope) {
     $scope.awesomeThings = [
     'HTML5 Boilerplate',
     'AngularJS',

@@ -61,7 +61,7 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid $orange-main;
 //   position:fixed;
 //   bottom:0;
 //   width:720px;
@@ -320,6 +320,9 @@ a.symbol:before {
 .modalDescription{
   color: $grey-font;
   margin-bottom: 70px;
+  a {
+    color: $orange-main;
+  }
 }
 
 .modalVideo{
@@ -424,5 +427,12 @@ a.symbol:before {
 }
 
 .impressum{
+  text-align: center;
+}
+
+.footericon{
+  i{
+    color: $orange-main;
+  }
   text-align: center;
 }

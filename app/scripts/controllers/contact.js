@@ -61,7 +61,7 @@ angular.module('devsynProject')
       {
         name : 'GitHub',
         icon : 'circlegithubalt',
-        link : 'www.github.com/Synisse/'
+        link : 'http://www.github.com/Synisse/'
       },
       {
         name : 'GPlus',
@@ -71,7 +71,7 @@ angular.module('devsynProject')
       {
         name : 'Twitter',
         icon : 'circletwitterbird',
-        link : 'https://twitter.com/Synisse87'
+        link : 'http://twitter.com/Synisse87'
       },
       {
         name : 'Email',

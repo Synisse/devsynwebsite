@@ -53,7 +53,7 @@
     "description": "A Neural Network to classify the color of pixels in a 100x100 Grid.",
     "image": "http://i.imgur.com/yhPE3h6.png",
     "percent": "100",
-    "youtube": "",
+    "youtube": "http://www.youtube.com/embed/qIzYVXqIdZk",
     "screenshots": [],
     "longdescription": "Implementation of a neural network with an adjustable amount of hidden layers and neurons.",
     "sourcecode": "https://github.com/Synisse/neuralnetwork"
@@ -69,7 +69,7 @@
     "description": "Implementation of the Q-Learning algorithm to find the quickest path through randomizable maze.",
     "image": "http://i.imgur.com/V2Vsftv.png",
     "percent": "100",
-    "youtube": "",
+    "youtube": "http://www.youtube.com/embed/LTwuc5KM70g",
     "screenshots": [],
     "longdescription": "",
     "sourcecode": "https://github.com/Synisse/qlearning"
@@ -81,13 +81,16 @@
       "C#",
       "Java",
       "Android",
-      "Eigenfaces"
+      "Eigenfaces",
+      "ILNumerics"
     ],
     "description": "A Face Recognition implementation with C#.",
     "image": "http://i.imgur.com/eqswyux.png",
     "percent": "100",
     "youtube": "",
-    "screenshots": [],
+    "screenshots": [
+      "http://i.imgur.com/H8JmdfX.png"
+    ],
     "longdescription": "",
     "sourcecode": "https://github.com/Synisse/eigenfaces"
   },
@@ -106,9 +109,9 @@
     "percent": "30",
     "youtube": "",
     "screenshots": [
-      "http://i.imgur.com/2KKlh46.png"
+      "http://i.imgur.com/Fli6QpR.png"
     ],
-    "longdescription": "A dynamic QuakeIII-styled paintball game built with Unity 3D. You can test the current state of the game right <a target=\"_blank\" href=\"http://devsyn.de/UnityTest/NetworkBuilds/webbuild0123.html\">\"here </a>.",
+    "longdescription": "A dynamic QuakeIII-styled paintball game built with Unity 3D. You can test the current state of the game right <a target=\"_blank\" href=\"http://devsyn.de/UnityTest/NetworkBuilds/webbuild0123.html\">here </a>.",
     "sourcecode": ""
   },
   {
@@ -123,12 +126,12 @@
       "iOS",
       "Android"
     ],
-    "description": "culimatch",
+    "description": "Hybrid app for the mobile usage of the culimatch platform.",
     "image": "http://i.imgur.com/bkid9ze.png",
     "percent": "80",
     "youtube": "",
     "screenshots": [],
-    "longdescription": "",
+    "longdescription": "This app was built for the dutch webplatform <a target=\"_blank\" href=\"http://culimatch.nl/\">culimatch.nl </a> of the company culimedia. The app will be an easy to use and intuitive mobile alternative to the official website. The app is not yet published, but should be available soon.",
     "sourcecode": ""
   },
   {
@@ -146,12 +149,12 @@
       "Android",
       "Chrome Extensions"
     ],
-    "description": "forex4noobs",
+    "description": "Webapp to track the opening times of the global forex markets.",
     "image": "http://i.imgur.com/gawtIAC.png",
     "percent": "100",
     "youtube": "",
     "screenshots": [],
-    "longdescription": "",
+    "longdescription": "This webapp was built for multiple platforms such as Chrome Extensions, Browser, Android and iOS App. You can find the webversion of this tool on the <a target=\"_blank\" href=\"https://www.forex4noobs.com/forex-tools/forex-clock/\">forex4noobs website </a>.",
     "sourcecode": ""
   },
   {
@@ -168,7 +171,7 @@
     "percent": "100",
     "youtube": "",
     "screenshots": [],
-    "longdescription": "",
+    "longdescription": "This game was programmed with C# and the WCF Service. You can play this game with two players via LAN.",
     "sourcecode": ""
   },
   {
@@ -205,7 +208,7 @@
     ],
     "description": "this.website",
     "image": "http://i.imgur.com/Xpq8Scm.png",
-    "percent": "50",
+    "percent": "90",
     "youtube": "",
     "screenshots": [],
     "longdescription": "",
